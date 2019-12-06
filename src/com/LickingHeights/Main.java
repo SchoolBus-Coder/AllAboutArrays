@@ -12,7 +12,7 @@ public class Main {
 
         System.out.println("The sum of the array is " + sum(array));
         System.out.println("The min of the array is " + min(array));
-//        System.out.println("The max of the array is " + max(array));
+        System.out.println("The max of the array is " + max(array));
 
 //        Pattern1();
 //        Pattern2();
@@ -115,16 +115,16 @@ public class Main {
         return min;
     }
 
-//    public static int max(int[] array) {
-//        int max = 0;
-//
-//        for (int i = 0; i < array.length; i++) {
-//            if (max > array[1]) {
-//                array[1] = max;
-//            }
-//            max = array[1];
-//        }
-//        return max;
-//    }
+    public static int max(int[] array) {
+        int max = 0;
+
+        for (int i = 0; i < array.length; i++) {
+            if (max > array[1]) {
+                array[1] = max;
+            }
+            max = array[1];
+        }
+        return max;
+    }
 
 }
