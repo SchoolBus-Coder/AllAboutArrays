@@ -9,10 +9,13 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
-
+        printArray(array);
         System.out.println("The sum of the array is " + sum(array));
         System.out.println("The min of the array is " + min(array));
         System.out.println("The max of the array is " + max(array));
+        printArray(array);
+        System.out.println("After BubbleSort ");
+        printArray(BubbleSort(array));
 
 //        Pattern1();
 //        Pattern2();
@@ -44,7 +47,7 @@ public class Main {
         return number;
     }
 
-    //    public static void Pattern1(){
+    //        public static void Pattern1(){
 //        for(int rows = 0; rows < 6; rows++){
 //
 //            for(int columns = 0; columns < 6; columns++){
@@ -125,6 +128,20 @@ public class Main {
             max = array[1];
         }
         return max;
+    }
+
+    public static int[] BubbleSort (int []array){
+        int n = array.length;
+        for(int i = 0; i < n-1; i++)
+            for (int j = i+1; j < n; j++)
+                if (array[j] < array[i])
+
+                {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+                return array;
     }
 
 }
