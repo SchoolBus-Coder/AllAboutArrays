@@ -9,6 +9,14 @@ public class Main {
 
 
         int[] array = createNumberArray(size, lowestNumber, highestNumber);
+
+
+        String[] places = {"gay club", "egypt", "hickory house", "intercourse pennsylvania"};
+        String[] adjectives = {"elongated", "stiff", "jocular", "autistic"};
+        String[] people = {"ben dover", "moe lester", "stalin", "madame dick burns"};
+        String[] things = {"earth", "german tank", "litter box", "nigeria"};
+        String[] verbs = {"fast", "ejaculate", "rise", "link"};
+        String[] times = {"2000", "1969", "2019", "9/11"};
         printArray(array);
         System.out.println("The sum of the array is " + sum(array));
         System.out.println("The min of the array is " + min(array));
