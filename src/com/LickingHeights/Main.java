@@ -17,10 +17,15 @@ public class Main {
         String[] adjectives = {"elongated", "stiff", "jocular", "autistic"};
         String[] people = {"ben dover", "moe lester", "stalin", "madame dick burns"};
         String[] things = {"earth", "german tank", "litter box", "nigeria"};
-        String[] verbs = {"fast", "ejaculate", "rise", "link"};
+        String[] verbs = {"fast", "ejaculated", "hard", "paint"};
         String[] times = {"2000", "1969", "2019", "9/11"};
+        String[] FirstName = {"Zac", "Nathan", "Grant", "Isancor"};
+        String[] MiddleName = {"Stration", "Charles", "David", "Geleta"};
+        String[] LastName = {"Miller", "kilpatrick", "Caldwell", "Yadessa"};
+
         printArray(array);
-        sentanceGenorator(verbs, places, adjectives, people, things, times);
+        sentenceGenerator(verbs, places, adjectives, people, things, times);
+        print80sRappperName(FirstName, MiddleName, LastName);
 //        System.out.println("The sum of the array is " + sum(array));
 //        System.out.println("The min of the array is " + min(array));
 //        System.out.println("The max of the array is " + max(array));
@@ -155,13 +160,22 @@ public class Main {
 //                return array;
 //    }
 
-    public static void sentanceGenorator(String[]verbs, String[]places, String[]adjectives, String[]people, String[]things, String[]times){
-        System.out.print("I was " +randomWord(verbs)+" down the " +randomWord(places)+ " around " +randomWord(times)+ " with my best friend " +randomWord(people)+ " and we "
-                +randomWord(verbs)+ " a " +randomWord(adjectives)+randomWord(things)+ " that was " +randomWord(verbs)+randomWord(things));
+    public static void sentenceGenerator(String[]verbs, String[]places, String[]adjectives, String[]people, String[]things, String[]times) {
+        System.out.println("I was " + randomWord(verbs) + " down the " + randomWord(places) + " around " + randomWord(times) + " with my best friend " + randomWord(people) + " and we "
+                + randomWord(verbs) + " a " + randomWord(adjectives) + randomWord(things) + " that was " + randomWord(verbs) + randomWord(things));
     }
     public static String randomWord(String[] array){
         Random random = new Random();
         return array[random.nextInt(array.length)];
     }
+    public static void print80sRappperName(String[]FirstName, String[]MiddleName, String[]LastName) {
+        System.out.println(randomWord(FirstName) + randomWord(MiddleName) + randomWord(LastName));
+
+
+
+
+    }
+
+
 
 }
