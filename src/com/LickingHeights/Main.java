@@ -1,5 +1,7 @@
 package com.LickingHeights;
 
+import java.util.Random;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,12 +20,13 @@ public class Main {
         String[] verbs = {"fast", "ejaculate", "rise", "link"};
         String[] times = {"2000", "1969", "2019", "9/11"};
         printArray(array);
-        System.out.println("The sum of the array is " + sum(array));
-        System.out.println("The min of the array is " + min(array));
-        System.out.println("The max of the array is " + max(array));
-        printArray(array);
-        System.out.println("After BubbleSort ");
-        printArray(BubbleSort(array));
+        sentanceGenorator(verbs, places, adjectives, people, things, times);
+//        System.out.println("The sum of the array is " + sum(array));
+//        System.out.println("The min of the array is " + min(array));
+//        System.out.println("The max of the array is " + max(array));
+//        printArray(array);
+//        System.out.println("After BubbleSort ");
+//        printArray(BubbleSort(array));
 
 //        Pattern1();
 //        Pattern2();
@@ -105,51 +108,60 @@ public class Main {
 //            System.out.println();
 //        }
 //    }
-    public static int sum(int[] array) {
-        int sum = 0;
+//    public static int sum(int[] array) {
+//        int sum = 0;
+//
+//        for (int i = 0; i < array.length; i++) {
+//            sum += array[i];
+//        }
+//        return sum;
+//    }
+//
+//    public static int min(int[] array) {
+//        int min = 0;
+//
+//        for (int i = 0; i < array.length; i++) {
+//            if (min < array[1]) {
+//                array[1] = min;
+//            }
+//            min = array[1];
+//        }
+//        return min;
+//    }
+//
+//    public static int max(int[] array) {
+//        int max = 0;
+//
+//        for (int i = 0; i < array.length; i++) {
+//            if (max > array[1]) {
+//                array[1] = max;
+//            }
+//            max = array[1];
+//        }
+//        return max;
+//    }
+//
+//    public static int[] BubbleSort (int []array){
+//        int n = array.length;
+//        for(int i = 0; i < n-1; i++)
+//            for (int j = i+1; j < n; j++)
+//                if (array[j] < array[i])
+//
+//                {
+//                    int temp = array[i];
+//                    array[i] = array[j];
+//                    array[j] = temp;
+//                }
+//                return array;
+//    }
 
-        for (int i = 0; i < array.length; i++) {
-            sum += array[i];
-        }
-        return sum;
+    public static void sentanceGenorator(String[]verbs, String[]places, String[]adjectives, String[]people, String[]things, String[]times){
+        System.out.print("I was " +randomWord(verbs)+" down the " +randomWord(places)+ " around " +randomWord(times)+ " with my best friend " +randomWord(people)+ " and we "
+                +randomWord(verbs)+ " a " +randomWord(adjectives)+randomWord(things)+ " that was " +randomWord(verbs)+randomWord(things));
     }
-
-    public static int min(int[] array) {
-        int min = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            if (min < array[1]) {
-                array[1] = min;
-            }
-            min = array[1];
-        }
-        return min;
-    }
-
-    public static int max(int[] array) {
-        int max = 0;
-
-        for (int i = 0; i < array.length; i++) {
-            if (max > array[1]) {
-                array[1] = max;
-            }
-            max = array[1];
-        }
-        return max;
-    }
-
-    public static int[] BubbleSort (int []array){
-        int n = array.length;
-        for(int i = 0; i < n-1; i++)
-            for (int j = i+1; j < n; j++)
-                if (array[j] < array[i])
-
-                {
-                    int temp = array[i];
-                    array[i] = array[j];
-                    array[j] = temp;
-                }
-                return array;
+    public static String randomWord(String[] array){
+        Random random = new Random();
+        return array[random.nextInt(array.length)];
     }
 
 }
